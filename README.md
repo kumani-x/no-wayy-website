@@ -36,7 +36,7 @@ Outisde of tech, I enjoy cooking :fried_egg: and baking :cake: (it's one of my w
 
 Here is a snippet of layout of my README file on code github:
 
-![README file](cfg-assignments/images/final-readme.png)
+![README file](images/final-readme.png)
 
 To setup for this project:
 
@@ -66,7 +66,7 @@ git checkout -b feature-assignment-1
 
 ---
 
-![Creating branch](cfg-assignments/images/creating-branch.png)
+![Creating branch](images/creating-branch.png)
 
 ### Creating and adding commits
 
@@ -85,7 +85,7 @@ git commit -m
 
 ---
 
-![git commit](cfg-assignments/images/git-commit.png)
+![git commit](images/git-commit.png)
 
 *Side note - Originally I did create the file first then the branch because I thought I created the branch but, it was added and committed within the feature branch at the same time to show the git workflow.*
 
@@ -99,7 +99,7 @@ git push origin feature-branch
 
 ---
 
-![git push](cfg-assignments/images/git-push.png)
+![git push](images/git-push.png)
 
 After pushing my branch to GitHub, I then opened a `git pull` request to compare my feature branch to the main.
 
@@ -109,7 +109,7 @@ Pull requests can also be used reviewing changes before updating, checking code 
 
 ---
 
-![git pull](cfg-assignments/images/git-pull.png)
+![git pull](images/git-pull.png)
 
 
 ### Merging and deploying to main branch
@@ -118,13 +118,13 @@ After reviewing the pull request, I finally merged my changes to the main branch
 
 ---
 
-![review merge](cfg-assignments/images/review-merge-request.png)
+![review merge](images/review-merge-request.png)
 
 This merging process helps updates from the main branch to **main codebase** be streamlined and efficient.
 
 ---
 
-![confirmed merge](cfg-assignments/images/confirmed-merge.png)
+![confirmed merge](images/confirmed-merge.png)
 
 
 

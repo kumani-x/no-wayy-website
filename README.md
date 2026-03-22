@@ -13,7 +13,7 @@ Outisde of tech, I enjoy cooking :fried_egg: and baking :cake: (it's one of my w
 
 ## Projects :computer:
 
-- **No Wayy Website** - I'm currently building a website for my sister's creative agency to support women in sports (in progress)[view project](https://github.com/kumani-x/no-wayy-website)
+- **No Wayy Website** - I'm currently building a website for my sister's creative agency to support women in sports (in progress) [view project](https://github.com/kumani-x/no-wayy-website)
 
 - **Portfolio** - A portfolio to showcase my personal projects [view project](https://github.com/kumani-x/Portfolio)
 
@@ -47,14 +47,14 @@ To setup for this project:
 4. To confirm the repo connected locally I added the command in my terminal:
     `cd "cfg-assignments"` 
 
-cd
-: change directory is a command that allows you to move to the folder you want.
+    cd
+    : change directory is a command that allows you to move to the folder you want.
 
 5. Then I started my development on VS Code.
 
 ---
 
-*Normally, you can command `git init` in the terminal and then connect to GitHub using `git remote add origin` then `git push -u origin main` but I ran into some issues :sweat_smile:*.
+*Normally, you can command `git init` in the terminal and then connect to GitHub using `git remote add origin` then `git push -u origin main` but I ran into some issues*:sweat_smile:.
 
 ### Creating a branch
 
@@ -103,7 +103,7 @@ git push origin feature-branch
 
 After pushing my branch to GitHub, I then opened a *pull request* to compare my feature branch to the main.
 
-Pull requests are ==important== as they give you the most up-to-date version remote repositiory in our local repositiory.
+Pull requests are **important** as they give you the most up-to-date version remote repositiory in our local repositiory.
 
 Pull requests can also be used for reviewing changes before updating, checking code quality, and collaborating with other developers.
 
@@ -131,6 +131,12 @@ This merging process helps updates from the main branch to **main codebase** be 
 Before pushing my final request, I rand the command `git status`.
 
 I did this because that command displays your working directory and staging area such as **untracked**, **modified**, or **staged**. 
+
+---
+
+![git status](images/git-status.png)
+
+*This screenshot shows me commanding git status to track my modifications before I push my final submissions*.
 
 ## Additional steps
 

@@ -51,4 +51,5 @@ const codingLang = {
 }
 
 codingLang.introduce();
-
+// Output: JavaScript is a scripting language that was created in 1995 by Brendan Eich.
+// JavaScript is case sensitive and is mainly used for Web Development, Mobile Development, Game Development, Server Applications, AI and Machine Learning.

@@ -1,4 +1,26 @@
 *{
-background-color: #e680fd;
-
+background-color: #FAF9F6;
+font-family: "Lexend Giga", sans-serif;
+margin: 0;
+padding: 0;
+height: 100%;
 }
+
+body{
+background-color: #FAF9F6;
+font-family: "Lexend Giga", sans-serif;
+display: flex;
+justify-content: center;
+min-height: 100vh;
+overflow-x: hidden;  /* Prevents horizonal scrolling */
+}
+
+#questions-container{
+background-color: white;
+flex-direction: column;
+align-items: center;
+border-radius: 10px;
+padding: 20px;
+margin-top: 20px;
+}
+

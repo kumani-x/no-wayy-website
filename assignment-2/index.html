@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Zayda's Closet</title>
 </head>
 <body>
@@ -15,6 +15,7 @@
     </section>
 
     <!-- Sections for the questions -->
+   <section id="questions" class="questions-container">
     <section id="occasion">
         <h2>What's the occasion?</h2> <!-- Radio buttons for the specific occasion  -->
      <label>
@@ -29,14 +30,13 @@
     </section>
 
     <!--Budget section using input field-->
-<section id="questions">
     <section id="budget">
         <h2>What's your budget?</h2>
         <p>Enter your budget (£): <input type="number" id="budget-input"></p>
     </section>
 
-    <!---User has option to add accessories by checking a box-->
-    <section id = "acessories">
+    <!--User has option to add accessories by checking a box-->
+    <section id = "accessories">
      <h2>Do you want to add accessories?</h2>
      <label>
         <input type="checkbox" name="accessories" value="yes">Yes
@@ -44,7 +44,7 @@
         <label>
             <input type="checkbox" name="accessories" value="no">No
         </label>
-       <button id="continue">Continue</button> 
+       <button id="continue-btn">Continue</button> 
     </section>
     <!---Styling section-->
 </section>
@@ -69,10 +69,10 @@
      <div class="bottoms-container">
         <img id="bottoms" class="bottoms-image" src="" alt="bottoms" />
         <div class="caraousel-buttons">
-            <button id="2prevBtn">&#8592;</button>
+            <button id="2prevBtn">&#8592;</button> 
             <button id="2nextBtn">&#8594;</button>
         </div>
-     </div>
+     </div>                                     <!-- Each clothing container has a separate carousel button to prevent conflicts -->
      <div class="shoes-container">
         <img id="shoes" class="shoes-image" src="" alt="shoes" />
         <div class="caraousel-buttons">
@@ -84,7 +84,10 @@
 
     </div>
 </section>
-<section id="result">
+
+<!-- Result section shows the final outfit, total cost, a message and option to restart -->
+
+<section id="results">
     <h1>Here's your final look!</h1>
       <div class="results-container">
         <div class="results-addons">
@@ -110,6 +113,6 @@
 
       </div>
 </section>
- <script src="script.js"></script>   
-</body>
-</html>
+ <script src="script.js"></script> 
+ </body>
+

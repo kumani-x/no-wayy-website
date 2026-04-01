@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="styles.css">
+    <title>Zayda's Closet</title>
+</head>
+<body>
+   <!-- Welcoming page includes button to start the process -->
+   <section id = "welcome-page"> 
+    <h1>Welcome to Zayda's closet</h1>
+    <p>Let's dress you up for your occasion!</p>
+    <button id = "start-btn">Start</button>
+    </section>
+
+    <!-- Sections for the questions -->
+    <section id="occasion">
+        <h2>What's the occasion?</h2> <!-- Radio buttons for the specific occasion  -->
+     <label>
+        <input type="radio" name="occasion" value="casual">Casual
+     </label>
+     <label>
+        <input type="radio" name="occasion" value="party">Party
+     </label>
+     <label>
+        <input type="radio" name="occasion" value="work">Work
+     </label>   
+    </section>
+
+    <!--Budget section using input field-->
+<section id="questions">
+    <section id="budget">
+        <h2>What's your budget?</h2>
+        <p>Enter your budget (£): <input type="number" id="budget-input"></p>
+    </section>
+
+    <!---User has option to add accessories by checking a box-->
+    <section id = "acessories">
+     <h2>Do you want to add accessories?</h2>
+     <label>
+        <input type="checkbox" name="accessories" value="yes">Yes
+     </label>
+        <label>
+            <input type="checkbox" name="accessories" value="no">No
+        </label>
+       <button id="continue">Continue</button> 
+    </section>
+    <!---Styling section-->
+</section>
+   <section id="styling"> 
+    <h1>Let's get started!</h1>
+    <div class="styling-container">         
+        <div class="addons-accessories">
+            <img id="addOns" class="addons-image" src="" alt="accessories" />
+         <div class="caraousel-buttons">
+            <button id="0prevBtn">&#8592;</button>
+            <button id="0nextBtn">&#8594;</button>
+         </div>                                     <!---Styling section has same structure including:
+                                                          class-container, placeholder for image carousel button to next/ previous item  -->
+        </div>
+     <div class="tops-container">
+        <img id="tops" class="tops-image" src="" alt="tops" />
+        <div class="caraousel-buttons">
+            <button id="1prevBtn">&#8592;</button>
+            <button id="1nextBtn">&#8594;</button>
+        </div>
+     </div> 
+     <div class="bottoms-container">
+        <img id="bottoms" class="bottoms-image" src="" alt="bottoms" />
+        <div class="caraousel-buttons">
+            <button id="2prevBtn">&#8592;</button>
+            <button id="2nextBtn">&#8594;</button>
+        </div>
+     </div>
+     <div class="shoes-container">
+        <img id="shoes" class="shoes-image" src="" alt="shoes" />
+        <div class="caraousel-buttons">
+            <button id="3prevBtn">&#8592;</button>
+            <button id="3nextBtn">&#8594;</button>
+        </div>
+     </div>  
+     <button id="final-look-btn">Show the final look</button>
+
+    </div>
+</section>
+<section id="result">
+    <h1>Here's your final look!</h1>
+      <div class="results-container">
+        <div class="results-addons">
+         <img id="results-addons" class="results-addons-image" src="" alt="accessories" />
+        </div>
+
+        <div class="results-tops">
+         <img id="results-tops" class="results-tops-image" src="" alt="tops" />
+        </div>
+
+        <div class="results-bottoms">
+         <img id="results-bottoms" class="results-bottoms-image" src="" alt="bottoms" />
+        </div>
+
+        <div class="results-shoes">
+         <img id="results-shoes" class="results-shoes-image" src="" alt="shoes" />
+        </div>
+        
+        <p id="total-cost">Total Cost: £0</p>
+        <p id="message"></p>
+        <button id="restart-btn">Restart</button>
+
+
+      </div>
+</section>
+ <script src="script.js"></script>   
+</body>
+</html>

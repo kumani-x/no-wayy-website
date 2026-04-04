@@ -96,9 +96,10 @@ continueBtn.onclick = function(){
         styling.style.display = "block";
         welcomePage.style.display = "none";
         questions.style.display = "none";
-        prevBtn0.style.display = "none";
-        nextBtn0.style.display = "none" 
+        currentAddOns = [];
+        currentAddOnIndex = 0;
         console.log("no");
+        addOnButtons.style.display = "none";
     };
 }
 
@@ -111,6 +112,7 @@ const prevBtn2 = document.getElementById("2prevBtn");
 const nextBtn2 = document.getElementById("2nextBtn");
 const prevBtn3 = document.getElementById("3prevBtn");
 const nextBtn3 = document.getElementById("3nextBtn");
+const addOnButtons = document.getElementById("addon-buttons");
 
 const categories = {
    addOns: [
@@ -296,6 +298,10 @@ const resultsTops = document.getElementById("results-tops")
 const resultsBottoms = document.getElementById("results-bottoms");
 const resultsShoes = document.getElementById("results-shoes");
 
+const topsButtons = document.getElementById("tops-buttons");
+const bottomsButtons = document.getElementById("bottoms-buttons");
+const shoesButtons = document.getElementById("shoes-buttons")
+
 let totalCost = document.getElementById("total-cost");
 const message = document.getElementById("message");
 
@@ -313,12 +319,16 @@ finalLookBtn.addEventListener("click" , function(){
    stylingH1.style.display = "none";
     finalLook.style.display = "block";
    resultsH1.style.display = "block";
+   addOnButtons.style.display = "none";
    nextBtn0.style.display = "none";
    prevBtn0.style.display = "none";
+   topsButtons.style.display = "none";
     nextBtn1.style.display = "none";
     prevBtn1.style.display = "none";
+    bottomsButtons.style.display = "none";
    nextBtn2.style.display = "none";
     prevBtn2.style.display = "none";
+    shoesButtons.style.display = "none";
    nextBtn3.style.display = "none";
    prevBtn3.style.display = "none";
    finalLookBtn.style.display = "none"

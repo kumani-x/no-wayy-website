@@ -1,26 +1,143 @@
 *{
-background-color: #FAF9F6;
-font-family: "Lexend Giga", sans-serif;
-margin: 0;
+margin: 0 auto;
 padding: 0;
-height: 100%;
+box-sizing: border-box;
+  /*outline: 1px solid red;*/
 }
+
 
 body{
 background-color: #FAF9F6;
 font-family: "Lexend Giga", sans-serif;
 display: flex;
 justify-content: center;
+align-items: flex-start;
+padding-top: 120px;
 min-height: 100vh;
 overflow-x: hidden;  /* Prevents horizonal scrolling */
 }
 
-#questions-container{
-background-color: white;
-flex-direction: column;
-align-items: center;
-border-radius: 10px;
-padding: 20px;
-margin-top: 20px;
+ /* Welcoming page */
+
+ #welcome-page{
+    border-radius: 12px;
+    border: 15px solid none;
+    background-color: #E8A8A2;
+    padding: 80px 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 500px;
+ }
+
+.welcome-h1{
+    color: black;
+    font-size: 1.75rem;
+    text-align: center;
+    max-width: 500px;
+   
+   
 }
 
+.welcome-p{
+    color: black;
+    font-size: 1rem;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+button{
+    background-color: rgb(255, 192, 203);
+    color: #FAF9F6;
+    border: none;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.questions-container{
+    border: 15px solid none;
+    border-radius: 12px;
+    background-color:#E8A8A2;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 500px;
+    gap: 15px;
+}
+
+.occasion-h2,
+.accessories-h2,
+.budget-h2{
+   font-size: 20px; 
+   padding: 20px;
+   margin-right: 10px;
+}
+
+.occasion-options{
+    font-size: 16px;
+    margin-left: 10px;
+
+}
+
+#yesBtn,
+#noBtn{
+   font-size: 16px; 
+   margin-top: 5px;
+   margin-left: 10px;
+}
+
+#budget-input{
+   margin: auto;
+}
+
+#continue-btn{
+    margin-top: 20px;
+}
+
+.addons-container,
+.tops-container,
+.bottoms-container,
+.shoes-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 10px;
+}
+
+.addons-image,
+.tops-image,
+.bottoms-image,
+.shoes-image{
+    width: 90%;
+    max-width: 250px;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+    height: auto;
+}
+
+#addOns,
+#tops,
+#bottoms,
+#shoes{
+    width: 200px;
+}
+
+.caraousel-buttons{
+    width: 100px;
+    height: 50px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(255, 192, 203);
+}

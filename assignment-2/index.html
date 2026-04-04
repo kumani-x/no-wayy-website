@@ -9,50 +9,57 @@
 <body>
    <!-- Welcoming page includes button to start the process -->
    <section id = "welcome-page"> 
-    <h1>Welcome to Zayda's closet</h1>
-    <p>Let's dress you up for your occasion!</p>
+    <h1 class="welcome-h1">Welcome to Zayda's Closet</h1>
+    <p class="welcome-p">Let's dress you up for your occasion!</p>
     <button id = "start-btn">Start</button>
     </section>
 
     <!-- Sections for the questions -->
    <section id="questions" class="questions-container">
     <section id="occasion">
-        <h2>What's the occasion?</h2> <!-- Radio buttons for the specific occasion  -->
-     <label>
-        <input type="radio" name="occasion" value="casual">Casual
-     </label>
-     <label>
-        <input type="radio" name="occasion" value="party">Party
-     </label>
-     <label>
-        <input type="radio" name="occasion" value="work">Work
-     </label>   
-    </section>
+        <h2 class="occasion-h2">What's the occasion?</h2> <!-- Radio buttons for the specific occasion  -->
+   <div class="occasion-options">
 
-    <!--Budget section using input field-->
-    <section id="budget">
-        <h2>What's your budget?</h2>
-        <p>Enter your budget (£): <input type="number" id="budget-input"></p>
+        <input id="casualBtn" type="radio" name="occasion" value="casual">
+        <label for="casualBtn">Casual</label> 
+     
+        <input id="partyBtn" type="radio" name="occasion" value="party">
+         <label for="partyBtn">Party</label>
+     
+        <input id="workBtn" type="radio" name="occasion" value="work">
+        <label for="workBtn">Work</label> 
+
+    </div> 
     </section>
 
     <!--User has option to add accessories by checking a box-->
     <section id = "accessories">
-     <h2>Do you want to add accessories?</h2>
-     <label>
-        <input type="checkbox" name="accessories" value="yes">Yes
-     </label>
-        <label>
-            <input type="checkbox" name="accessories" value="no">No
-        </label>
-       <button id="continue-btn">Continue</button> 
+     <h2 class="accessories-h2">Do you want to add accessories?</h2>
+     
+        <input id="yesBtn" type="checkbox" name="accessories" value="yes" required>
+        <label for="yesBtn">Yes</label>
+
+            <input id="noBtn" type="checkbox" name="accessories" value="no" required>
+            <label for="noBtn">No</label>
+
     </section>
+
+     <!--Budget section using input field-->
+    <section id="budget">
+        <h2 class="budget-h2">What's your budget?</h2>
+        <p class="budget-p">Enter your budget (£): <input type="number" id="budget-input" required></p>
+    </section>
+
+       <button id="continue-btn">Continue</button> 
+
     <!---Styling section-->
 </section>
    <section id="styling"> 
-    <h1>Let's get started!</h1>
+    <h1 id="styling-h1">Let's get started!</h1>
     <div class="styling-container">         
         <div class="addons-accessories">
-            <img id="addOns" class="addons-image" src="" alt="accessories" />
+            <img id="addOns" class="addons-image" src="" alt="accessories"  />
+            <p id="addons-price"></p>
          <div class="caraousel-buttons">
             <button id="0prevBtn">&#8592;</button>
             <button id="0nextBtn">&#8594;</button>
@@ -61,13 +68,15 @@
         </div>
      <div class="tops-container">
         <img id="tops" class="tops-image" src="" alt="tops" />
+        <p id="top-price"></p>
         <div class="caraousel-buttons">
-            <button id="1prevBtn">&#8592;</button>
-            <button id="1nextBtn">&#8594;</button>
+            <button  id="1prevBtn">&#8592;</button>
+            <button  id="1nextBtn">&#8594;</button>
         </div>
      </div> 
      <div class="bottoms-container">
         <img id="bottoms" class="bottoms-image" src="" alt="bottoms" />
+        <p id="bottom-price"></p>
         <div class="caraousel-buttons">
             <button id="2prevBtn">&#8592;</button> 
             <button id="2nextBtn">&#8594;</button>
@@ -75,20 +84,20 @@
      </div>                                     <!-- Each clothing container has a separate carousel button to prevent conflicts -->
      <div class="shoes-container">
         <img id="shoes" class="shoes-image" src="" alt="shoes" />
+        <p id="shoe-price"></p>
         <div class="caraousel-buttons">
             <button id="3prevBtn">&#8592;</button>
             <button id="3nextBtn">&#8594;</button>
         </div>
      </div>  
-     <button id="final-look-btn">Show the final look</button>
-
     </div>
+    <button id="final-look-btn">Show the final look</button>
 </section>
 
 <!-- Result section shows the final outfit, total cost, a message and option to restart -->
 
 <section id="results">
-    <h1>Here's your final look!</h1>
+    <h1 id="results-h1">Here's your final look!</h1>
       <div class="results-container">
         <div class="results-addons">
          <img id="results-addons" class="results-addons-image" src="" alt="accessories" />
@@ -106,7 +115,7 @@
          <img id="results-shoes" class="results-shoes-image" src="" alt="shoes" />
         </div>
         
-        <p id="total-cost">Total Cost: £0</p>
+        <p id="total-cost"></p>
         <p id="message"></p>
         <button id="restart-btn">Restart</button>
 

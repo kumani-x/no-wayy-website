@@ -1,4 +1,4 @@
-# Outfit Builder Web App 
+# Outfit Builder Web App :womans_clothes: :ring:
 
 **Zayda's Closet** helps you create an outfit based on your preferences.
 

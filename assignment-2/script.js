@@ -6,6 +6,69 @@ const questions = document.getElementById("questions");
 const styling = document.getElementById("styling");
 const finalLook = document.getElementById("results");
 
+// accessing checked properties and input value for the question section
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+
+const casualBtn = document.getElementById("casualBtn");
+const partyBtn = document.getElementById("partyBtn");
+const workBtn = document.getElementById("workBtn");
+
+const startBtn = document.getElementById("start-btn");
+const continueBtn = document.getElementById("continue-btn");
+const restartBtn = document.getElementById("restart-btn");  //console.log(restartBtn);
+
+// Declaring caraousel buttons
+
+const prevBtn0 = document.getElementById("0prevBtn");
+const nextBtn0 = document.getElementById("0nextBtn");
+const prevBtn1 = document.getElementById("1prevBtn");
+const nextBtn1 = document.getElementById("1nextBtn");
+const prevBtn2 = document.getElementById("2prevBtn");
+const nextBtn2 = document.getElementById("2nextBtn");
+const prevBtn3 = document.getElementById("3prevBtn");
+const nextBtn3 = document.getElementById("3nextBtn");
+const addOnButtons = document.getElementById("addon-buttons");
+
+// variables declared for final look section
+
+const finalLookBtn = document.getElementById("final-look-btn");
+const stylingH1 = document.getElementById("styling-h1");
+const resultsH1 = document.getElementById("results-h1");
+
+const resultsAddOn = document.getElementById("results-addons");
+const resultsTops = document.getElementById("results-tops")
+const resultsBottoms = document.getElementById("results-bottoms");
+const resultsShoes = document.getElementById("results-shoes");
+
+//container that held the caraousel buttons
+const topsButtons = document.getElementById("tops-buttons");
+const bottomsButtons = document.getElementById("bottoms-buttons");
+const shoesButtons = document.getElementById("shoes-buttons")
+
+// Assigning ID that holds image and price
+let topImage = document.getElementById("tops"); 
+let topPrice = document.getElementById("top-price") 
+
+let bottomImage = document.getElementById("bottoms");
+let bottomPrice = document.getElementById("bottom-price");
+
+let shoeImage = document.getElementById("shoes");
+let shoePrice = document.getElementById("shoe-price");
+
+let addOnImage = document.getElementById("addOns");
+let addOnPrice = document.getElementById("addons-price");
+
+
+// accessing initial budget input from user
+
+const budgetInput = document.getElementById("budget-input");
+let totalCost = document.getElementById("total-cost");
+const message = document.getElementById("message");
+
+
+
+
 // WELCOME PAGE SECTION
 
 questions.style.display = "none"; // this will hide the question section until the user clicks the start button
@@ -14,24 +77,12 @@ finalLook.style.display = "none"; // hides final look section until user clicks 
 
 // start button logic using event listener
 
-const startBtn = document.getElementById("start-btn");
 startBtn.addEventListener("click", function(){ // when button is clicked, the user will be taken to the next section of the page
     welcomePage.style.display = "none"; // use .styles to hide the welcome page
     questions.style.display = "block"; // block helps to show the next section of the page
     styling.style.display =  "none"; // hides styling section until user clicks the continue button
     finalLook.style.display = "none"; 
 })
-
-// accessing checked properties and input value for the question section
-
-const yesBtn = document.getElementById("yesBtn");
-const noBtn = document.getElementById("noBtn");
-
-const casualBtn = document.getElementById("casualBtn");
-const partyBtn = document.getElementById("partyBtn");
-const workBtn = document.getElementById("workBtn");
-
-const continueBtn = document.getElementById("continue-btn");
     
 // continue button logic using onclick function
 continueBtn.onclick = function(){ 
@@ -108,17 +159,6 @@ continueBtn.onclick = function(){
 
 // STYLING SECTION
 
-// declaring caraousel buttons for the dress up section
-const prevBtn0 = document.getElementById("0prevBtn");
-const nextBtn0 = document.getElementById("0nextBtn");
-const prevBtn1 = document.getElementById("1prevBtn");
-const nextBtn1 = document.getElementById("1nextBtn");
-const prevBtn2 = document.getElementById("2prevBtn");
-const nextBtn2 = document.getElementById("2nextBtn");
-const prevBtn3 = document.getElementById("3prevBtn");
-const nextBtn3 = document.getElementById("3nextBtn");
-const addOnButtons = document.getElementById("addon-buttons");
-
 // an array to store values such as the images and prices
 const categories = {
    addOns: [
@@ -181,23 +221,15 @@ const categories = {
 let currentTops ; /* variables like currentTops are undefined 
                 so it can be reassigned to other values e.g. currentTops = categories.work.tops */
 let currentTopIndex = 0; // start of the array
-let topImage = document.getElementById("tops"); // declaring ID that holds image
-let topPrice = document.getElementById("top-price") // declaring ID that holds the price
 
 let currentBottoms ;
 let currentBottomIndex = 0;
-let bottomImage = document.getElementById("bottoms");
-let bottomPrice = document.getElementById("bottom-price");
 
-let shoeImage = document.getElementById("shoes");
 let currentShoes ; 
 let currentShoeIndex = 0;
-let shoePrice = document.getElementById("shoe-price");
 
-let addOnImage = document.getElementById("addOns");
 let currentAddOns ;
 let currentAddOnIndex = 0;
-let addOnPrice = document.getElementById("addons-price");
 
 // Using type conversion because HTML input field uses string whereas JS the label for price is a number
 
@@ -233,16 +265,17 @@ nextBtn0.onclick = function(){
     if(currentAddOnIndex < currentAddOns.length - 1){
    currentAddOnIndex++; // increases the array by 1
    showAddOns(); // show the next/current image
-} 
+} else {
+    currentAddOnIndex = 0;
+    showAddOns();
+  } 
 }
-
 prevBtn0.onclick = function(){
     if(currentAddOnIndex > 0 ){
    currentAddOnIndex--; // decreases array by 1
    showAddOns();
   }
 }
-
 nextBtn1.onclick = function(){
     if(currentTopIndex < currentTops.length - 1){
    currentTopIndex++;
@@ -293,33 +326,12 @@ prevBtn3.onclick = function(){
 }
 
 // FINAL LOOK SECTION
-// variables declared for final look section
-
-const finalLookBtn = document.getElementById("final-look-btn");
-const stylingH1 = document.getElementById("styling-h1");
-const resultsH1 = document.getElementById("results-h1");
-
-const resultsAddOn = document.getElementById("results-addons");
-const resultsTops = document.getElementById("results-tops")
-const resultsBottoms = document.getElementById("results-bottoms");
-const resultsShoes = document.getElementById("results-shoes");
-
-//container that held the caraousel buttons
-const topsButtons = document.getElementById("tops-buttons");
-const bottomsButtons = document.getElementById("bottoms-buttons");
-const shoesButtons = document.getElementById("shoes-buttons")
-
-let totalCost = document.getElementById("total-cost");
-const message = document.getElementById("message");
 
 // removed results containers as it interferred with images from the styling section
 resultsAddOn.remove();
 resultsTops.remove();
 resultsBottoms.remove();
 resultsShoes.remove();
-
-// declared initial budget input from user
-const budgetInput = document.getElementById("budget-input");
 
 finalLookBtn.addEventListener("click" , function(){
  welcomePage.style.display = "none"; 
@@ -408,14 +420,13 @@ function showOutfitMessage (){
    if (userBudget >= total ){ // if user's budget is higher than total it'll out cool outfit
      outfitMessage = true;
      message.textContent = "Cool Outfit!" 
+    message.style.color="#ff9999";
     }  else { // if user's budget is lower than the total it'll say you're over budget
      message.textContent = "cute...but you're over budget"
       outfitMessage = false; 
   } 
 } 
 //  restart button 
-const restartBtn = document.getElementById("restart-btn")
- //console.log(restartBtn);
 restartBtn.addEventListener("click" , function(){
     window.location.reload();
 });

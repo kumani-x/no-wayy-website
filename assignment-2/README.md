@@ -74,11 +74,14 @@ I've used HTML tags such as:
 - `<p></p>`
 -`<h2></h2>`
 Examples of CSS I used:
-- ```CSS
+- 
+```CSS
     button:hover{
     background-color: #e14d84; 
-}```
-  I used `button:hover` to make the buttons change colour when the cursor was on the button.
+}
+```
+
+I used `button:hover` to make the buttons change colour when the cursor was on the button.
 - `flex-direction: column` to make everything within the `questions-container` presented in a column rather than a row.
 
 ### Get input from the user on a web page
@@ -118,7 +121,7 @@ I have learned and improved my understanding of working with functions, arrays a
 
 ### How I solved the challenges
 
-To solve my challenges:
+
 - I broke things down by understanding the difference between certain variables e.g. `currentTops` is a variable that can be assigned to anything whereas `currentTopIndex` is a number that is assigned to the image in the array.
 - I went step by step to make sure I was on track, which reduced the amount of errors I made.
 - When I ran into an error, I didn't just try debugging anything I took certain steps e.g. checking whether the last line of code caused the issue, is their any open tags or extra closed tags, noting out lines one by one to find the issue.

@@ -125,7 +125,7 @@ I have learned and improved my understanding of working with functions, arrays a
 - I broke things down by understanding the difference between certain variables e.g. `currentTops` is a variable that can be assigned to anything whereas `currentTopIndex` is a number that is assigned to the image in the array.
 - I went step by step to make sure I was on track, which reduced the amount of errors I made.
 - When I ran into an error, I didn't just try debugging anything I took certain steps e.g. checking whether the last line of code caused the issue, is their any open tags or extra closed tags, noting out lines one by one to find the issue.
-- I also researched certain things if I didn't  have a full understanding.
+- I also researched certain things if I didn't have a full understanding.
 
 ### What I would improve
 
@@ -133,5 +133,5 @@ What I would learn for next time to make this outfit builder better, is maybe ha
 
 
 
-
+*ignore: submission for Assignment 2- to make pull request.*
 

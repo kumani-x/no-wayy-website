@@ -59,8 +59,15 @@ button{
     padding: 12px 30px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
+button:hover{
+   background-color: #e14d84; 
+}
+
+
+ /* question section */
 .questions-container{
     border: 15px solid none;
     border-radius: 12px;
@@ -103,6 +110,8 @@ button{
     margin-top: 20px;
 }
 
+/* styling section */
+
 .addons-container,
 .tops-container,
 .bottoms-container,
@@ -113,7 +122,9 @@ button{
     gap: 15px;
     width: 100%;
     padding: 10px;
+    cursor: pointer;
 }
+
 
 .addons-image,
 .tops-image,
@@ -140,4 +151,14 @@ button{
     border-radius: 10px;
     padding: 8px 16px;
     background-color: rgb(255, 192, 203);
+}
+
+#total-cost
+#message{
+   font-size: 1.5em;
+   padding: 10px; 
+}
+
+#restart-btn{
+    margin-top: 20px;
 }

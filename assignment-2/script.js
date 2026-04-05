@@ -1,9 +1,12 @@
-// Interactivity for Welcome page
+// Interactivity for Outfit Generator
 
+// Declaring sections of the generator
 const welcomePage = document.getElementById("welcome-page");
 const questions = document.getElementById("questions");
 const styling = document.getElementById("styling");
 const finalLook = document.getElementById("results");
+
+// WELCOME PAGE SECTION
 
 questions.style.display = "none"; // this will hide the question section until the user clicks the start button
 styling.style.display = "none"; // hides styling section until user clicks start button
@@ -37,7 +40,7 @@ continueBtn.onclick = function(){
     questions.style.display = "none";
     styling.style.display = "block"; // styling section will appear after user the click continue button
     finalLook.style.display = "none";
-
+// if statement used to generate selected occasion based on user's input
   if  (casualBtn.checked){
     currentTops = categories.casual.tops;
     currentBottoms = categories.casual.bottoms;
@@ -50,13 +53,12 @@ continueBtn.onclick = function(){
     showTop();
     showBottom();
     showShoe();
-
   }
     else if (partyBtn.checked){
     currentTops = categories.party.tops;
     currentBottoms = categories.party.bottoms;
     currentShoes = categories.party.shoes;
-
+    // variable linked to array so it will be set to the first image    
     currentTopIndex = 0;
     currentBottomIndex = 0;
     currentShoeIndex = 0;
@@ -64,8 +66,8 @@ continueBtn.onclick = function(){
     showTop();
     showBottom();
     showShoe();
-
-  } else if (workBtn.checked){
+  } 
+    else if (workBtn.checked){
     currentTops = categories.work.tops;
     currentBottoms = categories.work.bottoms;
     currentShoes = categories.work.shoes;
@@ -78,7 +80,7 @@ continueBtn.onclick = function(){
     showBottom();
     showShoe();
   };
-
+  // If statement if user selected yes for accessories
     if (yesBtn.checked){
         currentAddOns = categories.addOns;
         currentAddOnIndex = 0;
@@ -87,23 +89,26 @@ continueBtn.onclick = function(){
         styling.style.display = "block";
         welcomePage.style.display = "none";
         questions.style.display = "none";
-        alert("Get 15% off on accessories 💍✨");
+        alert("Get 15% off on accessories 💍✨"); // pop up to show sale on accessories
         console.log(alert);
         console.log("yes"); // this will log "yes" in the console if the user clicks the yes checkbox 
     }
+    // If the user selected no
     else if (noBtn.checked){
         addOnImage.style.display = "none";
         styling.style.display = "block";
         welcomePage.style.display = "none";
         questions.style.display = "none";
-        currentAddOns = [];
+        currentAddOns = []; // makes sure no addons image or container appears
         currentAddOnIndex = 0;
         console.log("no");
         addOnButtons.style.display = "none";
     };
 }
 
-// caraousel buttons for the dress up section
+// STYLING SECTION
+
+// declaring caraousel buttons for the dress up section
 const prevBtn0 = document.getElementById("0prevBtn");
 const nextBtn0 = document.getElementById("0nextBtn");
 const prevBtn1 = document.getElementById("1prevBtn");
@@ -114,6 +119,7 @@ const prevBtn3 = document.getElementById("3prevBtn");
 const nextBtn3 = document.getElementById("3nextBtn");
 const addOnButtons = document.getElementById("addon-buttons");
 
+// an array to store values such as the images and prices
 const categories = {
    addOns: [
        { image: "clothing-images/bag.jpg", price: 20 },
@@ -172,10 +178,11 @@ const categories = {
 },
 };
 
-let currentTops ;
-let currentTopIndex = 0;
-let topImage = document.getElementById("tops");
-let topPrice = document.getElementById("top-price")
+let currentTops ; /* variables like currentTops are undefined 
+                so it can be reassigned to other values e.g. currentTops = categories.work.tops */
+let currentTopIndex = 0; // start of the array
+let topImage = document.getElementById("tops"); // declaring ID that holds image
+let topPrice = document.getElementById("top-price") // declaring ID that holds the price
 
 let currentBottoms ;
 let currentBottomIndex = 0;
@@ -192,24 +199,20 @@ let currentAddOns ;
 let currentAddOnIndex = 0;
 let addOnPrice = document.getElementById("addons-price");
 
-
 // Using type conversion because HTML input field uses string whereas JS the label for price is a number
 
 // Show functions make the current array appear based on chosen path as well as the images and price
 
 function showAddOns(){
     const currentAddOn = currentAddOns[currentAddOnIndex];
-    addOnImage.src = currentAddOn.image;
-    addOnPrice.textContent = currentAddOn.price;
+    addOnImage.src = currentAddOn.image; // acessing image source through array of images in the categories
+    addOnPrice.textContent = currentAddOn.price; // accessing price through the array of prices in the categories
 }
 
 function showTop(){
    const currentTop = currentTops[currentTopIndex];
     topImage.src = currentTop.image;
     topPrice.textContent = currentTop.price; // using text content as we're retrieving data from categories
-  //  console.log(currentTop);
-  //  console.log(topImage);
-  //  topPrice.textContent = currentTop.price;
 }
 
 function showBottom(){
@@ -225,17 +228,17 @@ function showShoe(){
 }
 
 // Making sure each caraousel button has a function 
-
+// Use conditional statements for caraousel buttons
 nextBtn0.onclick = function(){
     if(currentAddOnIndex < currentAddOns.length - 1){
-   currentAddOnIndex++;
-   showAddOns();
+   currentAddOnIndex++; // increases the array by 1
+   showAddOns(); // show the next/current image
 } 
 }
 
 prevBtn0.onclick = function(){
     if(currentAddOnIndex > 0 ){
-   currentAddOnIndex--;
+   currentAddOnIndex--; // decreases array by 1
    showAddOns();
   }
 }
@@ -289,6 +292,9 @@ prevBtn3.onclick = function(){
   }
 }
 
+// FINAL LOOK SECTION
+// variables declared for final look section
+
 const finalLookBtn = document.getElementById("final-look-btn");
 const stylingH1 = document.getElementById("styling-h1");
 const resultsH1 = document.getElementById("results-h1");
@@ -298,6 +304,7 @@ const resultsTops = document.getElementById("results-tops")
 const resultsBottoms = document.getElementById("results-bottoms");
 const resultsShoes = document.getElementById("results-shoes");
 
+//container that held the caraousel buttons
 const topsButtons = document.getElementById("tops-buttons");
 const bottomsButtons = document.getElementById("bottoms-buttons");
 const shoesButtons = document.getElementById("shoes-buttons")
@@ -305,11 +312,13 @@ const shoesButtons = document.getElementById("shoes-buttons")
 let totalCost = document.getElementById("total-cost");
 const message = document.getElementById("message");
 
+// removed results containers as it interferred with images from the styling section
 resultsAddOn.remove();
 resultsTops.remove();
 resultsBottoms.remove();
 resultsShoes.remove();
 
+// declared initial budget input from user
 const budgetInput = document.getElementById("budget-input");
 
 finalLookBtn.addEventListener("click" , function(){
@@ -346,31 +355,31 @@ finalLookBtn.addEventListener("click" , function(){
 
 // Using an a for loop to calculate total cost of outfit generates
 function calculateTotalCost() {
-    let total = 0;
-    let items = [
+    let total = 0; // initally set total to 0
+    let items = [ // list items we want to calculate
         currentTops[currentTopIndex],
         currentBottoms[currentBottomIndex],
         currentShoes[currentShoeIndex]
-
     ];
-    if (yesBtn.checked && currentAddOnIndex !== undefined){
-        let discountedAddOn = {
+    //if statement if they selected yes and chose the accessory
+    if (yesBtn.checked && currentAddOnIndex !== undefined){ // use undefined as we don't known the user input 
+        let discountedAddOn = { // formula for discount
             price: currentAddOns[currentAddOnIndex].price * 0.85
         };
         items.push(discountedAddOn); // use .push() to add discountedAddOn into the array to calculate the total
     }
-    for(let i = 0; i < items.length; i++){
-        total += items[i].price;
+    for(let i = 0; i < items.length; i++){ // initilaiser equals 0 , condition if items length is bigger than initalise it will add
+        total += items[i].price; // total = each item price added together
     }
-    totalCost.textContent = "Total Cost: £" + total;
+    totalCost.textContent = "Total Cost: £" + total; // concatenation to show message
     console.log("Total cost: £", total);
-    return total;
+    return total; // shows price
+};
 
-}
+//calculateTotalCost();
 
-
-//Original outfit calculator
 /*
+Original outfit calculator - using only if statement
 function calculateTotalCost(){
     let total = 0;
     if (yesBtn.checked) {
@@ -378,7 +387,7 @@ function calculateTotalCost(){
     + currentTops[currentTopIndex].price 
     + currentBottoms[currentBottomIndex].price 
     + currentShoes[currentShoeIndex].price; 
-    totalCost.textContent = "Total Cost: £" + total; // contatenation
+    totalCost.textContent = "Total Cost: £" + total; // concatenation 
     } else{
        total = currentTops[currentTopIndex].price 
        + currentBottoms[currentBottomIndex].price 
@@ -390,29 +399,23 @@ function calculateTotalCost(){
 }
 */
 
-//calculateTotalCost();
+// used boolean for message output
 
-let outfitMessage = false;
+ let outfitMessage = false; 
+
 function showOutfitMessage (){
    let total = calculateTotalCost();
-   if (userBudget >= total ){
+   if (userBudget >= total ){ // if user's budget is higher than total it'll out cool outfit
+     outfitMessage = true;
      message.textContent = "Cool Outfit!" 
-    }  else {
+    }  else { // if user's budget is lower than the total it'll say you're over budget
      message.textContent = "cute...but you're over budget"
+      outfitMessage = false; 
   } 
-  
 } 
-
-//showOutfitMessage();
-
-//console.log(finalLookBtn);
-
+//  restart button 
 const restartBtn = document.getElementById("restart-btn")
  //console.log(restartBtn);
 restartBtn.addEventListener("click" , function(){
     window.location.reload();
 });
-
-
-//let resultTopImage = document.getElementById("results-tops");
-

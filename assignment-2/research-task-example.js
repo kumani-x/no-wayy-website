@@ -33,12 +33,12 @@ console.log(cfgDegreeArray);
 // 2.2
 
 const codingLang = {
-    name: "JavaScript",
-    type: "scripting language",
-    isCaseSensitive: "JavaScript is case sensitive",
-    yearCreated: 1995,
-    creator: "Brendan Eich",
-    use: "Web Development ,Mobile Development ,Game Development ,Server Applications ,AI and Machine Learning",
+    name: "Python",
+    type: "object-oriented programming language",
+    isCaseSensitive: "Python is case sensitive",
+    yearCreated: 1991,
+    creator: "Guido van Rossum",
+    use: "Software Development, Web Development, Mathematics, System scripting. ",
 
      
     introduce(){
@@ -51,5 +51,5 @@ const codingLang = {
 }
 
 codingLang.introduce();
-// Output: JavaScript is a scripting language that was created in 1995 by Brendan Eich.
-// JavaScript is case sensitive and is mainly used for Web Development, Mobile Development, Game Development, Server Applications, AI and Machine Learning.
+// Output: Python is a object-oriented programming language that was created in 1991 by Guido van Rossum.
+// Output: Python is case sensitive and is mainly used for Software Development,Web Development,Mathematics,System scripting. 

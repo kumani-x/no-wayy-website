@@ -1,7 +1,7 @@
 # Content Creator Tracker
 
 ## Project Overview
-This porject is a content creator tracker database which stores information about the creators, thei posts and even their post performance.
+This porject is a content creator tracker database which stores information about the creators, their posts and even their post performance.
 
 ## Purpose
 The purpose of this database is to show how content creators or small talent management teams can organise content and track performance. I chose this theme because I am strong interest in content creation and wanted to create a database relevant to real-world use.

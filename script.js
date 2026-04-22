@@ -189,22 +189,22 @@ document.addEventListener("DOMContentLoaded", () =>{
   initCarousel();
  });
 
+ const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-links');
 
- const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('is-open');
-  navLinks.classList.toggle('is-open');
-  toggle.setAttribute('aria-expanded', 
-    toggle.classList.contains('is-open')
-  );
-});
-
-// Close menu when a link is clicked
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    toggle.classList.remove('is-open');
-    navLinks.classList.remove('is-open');
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('is-open');
+    navMenu.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded',
+      navToggle.classList.contains('is-open')
+    );
   });
-});
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('is-open');
+      navMenu.classList.remove('is-open');
+    });
+  });
+}

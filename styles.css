@@ -1054,133 +1054,168 @@ body.is-leaving{
 /* TABLET (max 768px) */
 @media (max-width: 768px) {
 
-  /* Nav */
-  .site-nav {
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 3rem 1rem;
+  /* HOME - make tagline much smaller */
+  .tagline {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
   }
 
   .hero-title {
-    margin-top: 4rem;
+    font-size: clamp(3.5rem, 18vw, 6rem);
+    margin-top: 5rem;
   }
 
-  /* Editorial */
-  .editorial {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
-  /* Contact layout: stack into single column */
-  .contact-layout {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 0 1.5rem;
-  }
-
-  .contact-form-card {
-    margin-left: 0;
-    padding: 1.5rem;
-  }
-
-  /* Contact title */
+  /* CONTACT - title way too small, bump it up */
   .contact-title {
-    font-size: clamp(3.5rem, 12vw, 6rem);
+    font-size: clamp(3rem, 18vw, 5rem);
   }
 
-  /* Talent collage */
-  .talent-collage {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    min-height: auto;
+  /* ABOUT - paragraph is too big */
+  p.about-text,
+  .what-we-do-text {
+    font-size: 16px;
+    line-height: 1.6;
   }
 
-  .collage-large {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    height: 400px;
+  /* General body text too large on mobile */
+  body {
+    font-size: 16px;
   }
 
-  .collage-small-top,
-  .collage-small-bottom {
-    display: none; /* hide side images on mobile */
+  /* Page titles too small - bump up */
+  .page-title {
+    font-size: clamp(2.8rem, 10vw, 4rem);
   }
 
-  .talent-name {
-    font-size: clamp(2rem, 8vw, 3.5rem);
+  .role-title,
+  .what-we-do-title {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
   }
 
-  .talent-bio {
-    margin-top: 3rem;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-
-  /* Wide layout padding */
-  main.layout-wide {
-    padding: 1.5rem 1.25rem;
-  }
-
-  /* Carousel */
-  .slide img {
-    height: 280px;
-  }
-
-  .slide-caption {
-    left: 1rem;
-    bottom: 1rem;
-    max-width: 80%;
+  /* About tagline */
+  .about-tagline {
+    font-size: 18px;
   }
 }
 
-/* MOBILE (max 480px) */
 @media (max-width: 480px) {
 
-  /* Form: stack into single column */
-  .form-grid {
-    grid-template-columns: 1fr;
+  /* Even smaller on tiny phones */
+  .tagline {
+    font-size: 0.85rem;
   }
 
-  .btn-send {
-    width: 100%;
-    grid-column: 1 / 2;
+  p.about-text,
+  .what-we-do-text {
+    font-size: 15px;
+    line-height: 1.55;
   }
 
-  /* Nav */
+  .contact-title {
+    font-size: clamp(2.5rem, 16vw, 4rem);
+  }
+}
+/* ---- HAMBURGER MENU ---- */
+
+.nav-toggle {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animate bars into X when open */
+.nav-toggle.is-open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.is-open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.is-open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  font-weight: 300;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d90030;
+}
+
+.nav-links a.active {
+  color: var(--brand);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
   .site-nav {
-    gap: 0.85rem;
-    font-size: 0.9rem;
+    justify-content: flex-end;
+    position: relative;
   }
 
-  /* Page title */
-  .page-title {
-    font-size: clamp(2.5rem, 8vw, 3rem);
+  .nav-toggle {
+    display: flex; /* show hamburger on mobile */
   }
 
-  /* Talent grid already handles 1 column */
-
-  /* Footer */
-  .site-footer .footer-nav {
-    gap: 1rem;
+  .nav-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    width: 200px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 99;
   }
 
-  /* Email link */
-  .email {
-    font-size: 1.4rem;
+  .nav-links.is-open {
+    display: flex; /* show when toggled */
   }
 
-  /* Contact layout padding */
-  .contact-layout {
-    padding: 0 1rem;
+  .nav-links li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.95rem;
   }
 
-  main.layout-wide {
-    padding: 1rem;
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  .nav-links a:hover {
+    background: #fafafa;
+    color: var(--brand);
   }
 }

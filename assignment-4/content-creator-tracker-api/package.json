@@ -1,0 +1,20 @@
+{
+  "name": "content-creator-tracker-api",
+  "version": "1.0.0",
+  "description": "An API that helps tracks your analytical performance throughout your content creation journey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "kumani-x",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3",
+    "sql2": "^0.0.1"
+  }
+}

@@ -13,7 +13,7 @@ USE content_creator_tracker;
 -- DROP TABLE IF EXISTS creators;
 
 -- Verify if tables were created.
--- SHOW TABLES;
+SHOW TABLES;
 
 -- =========
 -- TABLES
